@@ -1,0 +1,18 @@
+.footer {
+  width: 100vw;
+  height: 120px;
+  color: #ffffff;
+  background-color: black;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+.seasoning-footer-icon {
+  width: 70px;
+  height: 70px;
+  vertical-align: bottom;
+}
+
+.footer>p {
+  font-size: 14px;
+}
