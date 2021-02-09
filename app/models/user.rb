@@ -9,6 +9,6 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX }
        
   # Association
-  # has_many :taste
+  has_many :taste
   # has_many :comments
 end

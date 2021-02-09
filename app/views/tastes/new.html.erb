@@ -2,9 +2,9 @@
 
   <div class="inner-contact">
      <div class="contact-form">
-        <%= form_with local: true do |f| %>
+        <%= form_with(model: @taste, local: true) do |f| %>
         <%#エラーメッセージの表示 %>
-         <%# <%= render "shared/error_messages", model: f.object, class: "error-messages" %>
+         <%= render "shared/error_messages", model: f.object, class: "error-messages" %>
            <div class= "form">
              <div class="form_left">
                <div class="weight-darkcyan-text">
@@ -18,11 +18,11 @@
                  <div class="weight-darkcyan-text">
                   おすすめジャンル
                  </div>
-               <%# <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"create-hour"}) %> 
+               <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"create-hour"}) %> 
                  <div class="weight-darkcyan-text">
-                      使用例
+                      作った料理
                   </div>
-               <%= f.text_field :example, class:"how_to_cooks", placeholder:"例) ケチャップ" %>
+               <%= f.text_field :example, class:"how_to_cooks", placeholder:"例) 唐揚げ" %>
              </div>
              <div class="form_right">
                <div class= "seasoning">
