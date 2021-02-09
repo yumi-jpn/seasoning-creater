@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+ display: flex;
+ justify-content: center;
+}
+
+.header {
+  width: 100vw;
+  height: 80px;
+  background-color: black
+} 
+
+ .seasoning-icon {
+  width: 70px;
+  height: 70px;
+  margin-left: 3vw;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+  justify-content: space-between;
+}
+
+.lists-left {
+  display: flex;
+}
+
+.sub_title{
+  font-family: fantasy;
+  font-size: 20px;
+  font-style: italic;
+  color: floralwhite;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: floralwhite;
+  font-family: "M PLUS Rounded 1c";
+
+} 
+
+.logout {
+  text-decoration: none;
+  color: floralwhite;
+  font-family: "M PLUS Rounded 1c";
+  margin-left: 10px;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: floralwhite;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.sign-up {
+  text-decoration: none;
+  color: floralwhite;
+  font-family: "M PLUS Rounded 1c";
+} 
