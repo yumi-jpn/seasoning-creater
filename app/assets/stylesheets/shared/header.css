@@ -9,7 +9,7 @@
 
 .header {
   width: 100vw;
-  height: 80px;
+  height: 200px;
   background-color: black
 } 
 
@@ -55,7 +55,6 @@
   margin-right: 3vw;
   color: floralwhite;
   font-family: "M PLUS Rounded 1c";
-
 } 
 
 .logout {

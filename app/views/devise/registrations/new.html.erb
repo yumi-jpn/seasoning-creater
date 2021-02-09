@@ -1,0 +1,37 @@
+<h1 class="title"><span>新規アカウント登録</span></h1>
+
+
+<%= form_with model:@user, url: user_registration_path, method: :post, class: 'registration-main', local: true do |f| %>
+   <%#エラーメッセージの表示 %>
+   <%= render "shared/error_messages", model: f.object, class: "error-messages" %>
+  <div class="form-wrap">
+   <div class="field">
+     <%= f.label :ニックネーム %><br />
+     <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+   </div>
+
+   <div class="field">
+     <%= f.label :email %><br />
+     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+   </div>
+
+   <div class="field">
+     <%= f.label :パスワード %><br />
+     <%= f.password_field :password, autocomplete: "new-password" %>
+   </div>
+
+   <div class="field">
+     <%= f.label :パスワード確認用 %><br />
+     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+   </div>
+
+   <div class="actions">
+     <%= f.submit "新規登録", class:"login-blue-btn" %>
+   </div>
+   <div class="registrations-link">
+     <%= link_to "登録済みの方はこちらから", new_user_session_path, class:'registrations-link' %>
+   </div>
+  </div>
+<% end %>
+
+
