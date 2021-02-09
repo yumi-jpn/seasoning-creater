@@ -1,0 +1,45 @@
+<%= render "/shared/header" %>
+
+  <div class="inner-contact">
+     <div class="contact-form">
+        <%= form_with local: true do |f| %>
+        <%#エラーメッセージの表示 %>
+         <%# <%= render "shared/error_messages", model: f.object, class: "error-messages" %>
+           <div class= "form">
+             <div class="form_left">
+               <div class="weight-darkcyan-text">
+                    テイスト名
+                 </div>
+               <%= f.text_area :title, class:"taste_title", placeholder:"例) 濃厚ケチャップ味" %>
+               <div class="weight-darkcyan-text">
+                    使用例の料理写真
+                </div>
+               <%= f.file_field :image, class:"taste_image" %>
+                 <div class="weight-darkcyan-text">
+                  おすすめジャンル
+                 </div>
+               <%# <%= f.collection_select(:hour_id, Hour.all, :id, :name, {}, {class:"select-box", id:"create-hour"}) %> 
+                 <div class="weight-darkcyan-text">
+                      使用例
+                  </div>
+               <%= f.text_field :example, class:"how_to_cooks", placeholder:"例) ケチャップ" %>
+             </div>
+             <div class="form_right">
+               <div class= "foodstuff">
+                  <div class="weight-darkcyan-text">
+                      材料名
+                      <%= f.text_field "hoge", class:"foodstuff_name", placeholder:"例) 玉ねぎ" %>
+                  </div>
+                  <div class="weight-darkcyan-text">
+                      配合
+                     <%= f.text_field "hoge", class:"quantity", placeholder:"例) 1個" %>
+                  </div>
+               </div>
+             </div>
+           </div>
+          <%= f.submit "submit", class:"form-btn semibold" %> 
+        <% end %>
+   </div>
+</div>
+
+<%= render "/shared/footer"%>

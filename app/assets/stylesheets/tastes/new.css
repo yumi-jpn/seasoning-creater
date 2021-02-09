@@ -1,0 +1,126 @@
+/* テイスト投稿ページ */
+
+.inner-contact{
+  margin-top: 50px;
+}
+
+/* フォーム */
+
+.form{
+  padding: 15px;
+  background:#f8f8f8;
+  border:1px solid rgba(0, 0, 0, 0.075);
+  margin-bottom:25px;
+  color:#727272 !important;
+  font-size:16px;
+  display: flex;
+}
+
+.form_left{
+  justify-content: center;
+  height: 100vh;
+  width: 50vw;
+  padding-left: 50px;
+}
+
+.weight-darkcyan-text{
+ font-family: "M PLUS Rounded 1c";
+ margin-top: 20px;
+ color: darkcyan;
+}
+
+.taste_title{
+  height: 40px;
+  width: 60%;
+}
+
+.how_to_cooks{
+  height: 80px;
+  width: 80%;
+}
+
+.form_right{
+  height: 100vh;
+  width: 50vw;
+  padding-left: 50px;
+}
+
+.foodstuff{
+  height: 30px;
+  width: 200px;
+  display: flex;
+}
+
+.food_names{
+  height: 30px;
+}
+
+.quantity{
+  height: 30px;
+  width: 150px;
+  margin-left: 5px;
+}
+
+
+/* Generic Button Styles */
+
+.button{
+  padding:8px 12px;
+  background:#0A5175;
+  display: block;
+  width:120px;
+  margin:10px 0 0px 0;
+  border-radius:3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align:center;
+  font-size:0.8em;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
+
+.button:hover{
+  background:#8BC3A3;
+  color:white;
+}
+
+/* 送信ボタン */
+.form-btn{
+  width:180px;
+  display: block;
+  height: auto;
+  padding:15px;
+  color:#fff;
+  background:#8BC3A3;
+  border:none;
+  border-radius:3px;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin:auto;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+}
+
+.form-btn:hover{
+  background:#111;
+  color: white;
+  border:none;
+}
+
+.form-btn:active{
+  opacity: 0.9;
+}
+
+input {
+  position: relative;
+  z-index: 9999;
+}
+/* 送信ボタン */
+
+/* レシピ投稿ページ */
