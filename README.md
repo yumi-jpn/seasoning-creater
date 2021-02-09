@@ -1,24 +1,91 @@
-# README
+# 目的
+自炊をしながらもいつも同じ味に片寄ってしまう。レパートリーを増やしたいというかたに向けたアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 使い方
+完成次第記述。
 
-Things you may want to cover:
+## こだわったポイント
+完成次第記述。
 
-* Ruby version
+## 使用言語
+- Ruby
+- Java script
 
-* System dependencies
+## フレームワーク
+- Ruby on rails
+- Jquery
 
-* Configuration
 
-* Database creation
+# テーブル設計
 
-* Database initialization
+## usersテーブル
 
-* How to run the test suite
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- has_many :taste
+- has_many :comments
 
-* Deployment instructions
+## tasteテーブル
 
-* ...
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| title     | string     | null: false                    |
+| example   | text       | null: false                    |
+| genre_id  | integer    | null: false                    |
+| user      | references | null: false, foreign_key: true |
+| seasoning | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_one :seasoning
+- has_many :menu_tags
+- has_many :comments
+
+## commentsテーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| comment  | string     |                                |
+| user     | references | null: false, foreign_key: true |
+| menu     | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :taste
+
+## seasoningテーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| seasoning_name | string     | null: false                    |
+| quantity       | string     | null: false                    |
+| taste          | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :taste
+
+## taste_tag_relationsテーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| taste    | references | null: false, foreign_key: true |
+| tag      | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :taste
+- belongs_to :tag
+
+## tagsテーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+
+### Association
+- has_many :taste_tags
+- has_many :tags, through: taste_tags
