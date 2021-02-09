@@ -45,24 +45,22 @@
   padding-left: 50px;
 }
 
-.foodstuff{
+.seasoning{
   height: 30px;
-  width: 200px;
   display: flex;
 }
 
-.food_names{
-  height: 30px;
+.seasoning_name{
+  width: 150px;
 }
 
 .quantity{
-  height: 30px;
-  width: 150px;
+  width: 80px;
   margin-left: 5px;
 }
 
 
-/* Generic Button Styles */
+/* 送信ボタン */
 
 .button{
   padding:8px 12px;
@@ -86,7 +84,6 @@
   color:white;
 }
 
-/* 送信ボタン */
 .form-btn{
   width:180px;
   display: block;
