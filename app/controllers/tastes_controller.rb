@@ -5,6 +5,7 @@ class TastesController < ApplicationController
 
   def new
     @taste = Taste.new
+    2.times { @taste.taste_seasonings.build }
   end
 
   def create
@@ -19,6 +20,6 @@ class TastesController < ApplicationController
   private
 
   def taste_params
-    params.require(:taste).permit(:title, :example, :image, :genre_id).merge(user_id: current_user.id)
+    params.require(:taste).permit(:title, :example, :image, :genre_id, taste_seasonings_attributes: [:seasoning_name, :quantity]).merge(user_id: current_user.id)
   end
 end

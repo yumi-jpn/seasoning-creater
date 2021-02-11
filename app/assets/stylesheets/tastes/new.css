@@ -7,6 +7,7 @@
 /* フォーム */
 
 .form{
+  height: 50vh;
   padding: 15px;
   background:#f8f8f8;
   border:1px solid rgba(0, 0, 0, 0.075);
@@ -29,6 +30,7 @@
  color: darkcyan;
 }
 
+
 .taste_title{
   height: 40px;
   width: 60%;
@@ -47,7 +49,18 @@
 
 .seasoning{
   height: 30px;
+}
+
+.seasoning-texts{
   display: flex;
+  margin-right: 100px;
+}
+
+.seasoning-text{
+ font-family: "M PLUS Rounded 1c";
+ margin-top: 20px;
+ margin-right: 110px;
+ color: darkcyan;
 }
 
 .seasoning_name{
