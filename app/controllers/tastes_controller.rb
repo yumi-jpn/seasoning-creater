@@ -1,4 +1,6 @@
 class TastesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
     @taste = Taste.all
   end
@@ -22,4 +24,5 @@ class TastesController < ApplicationController
   def taste_params
     params.require(:taste).permit(:title, :example, :image, :genre_id, taste_seasonings_attributes: [:seasoning_name, :quantity]).merge(user_id: current_user.id)
   end
+
 end

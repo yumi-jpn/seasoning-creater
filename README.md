@@ -32,17 +32,18 @@
 
 ## tasteテーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| title     | string     | null: false                    |
-| example   | text       | null: false                    |
-| genre_id  | integer    | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| seasoning | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| title           | string     | null: false                    |
+| example         | string     | null: false                    |
+| recipe          | text       | null: false                    |
+| genre_id        | integer    | null: false                    |
+| user            | references | null: false, foreign_key: true |
+| taste_seasoning | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
-- has_one :seasoning
+- has_one :taste_seasoning
 - has_many :menu_tags
 - has_many :comments
 
@@ -58,7 +59,7 @@
 - belongs_to :user
 - belongs_to :taste
 
-## seasoningテーブル
+## taste_seasoningテーブル
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |

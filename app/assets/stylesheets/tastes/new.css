@@ -7,7 +7,7 @@
 /* フォーム */
 
 .form{
-  height: 50vh;
+  height: 60vh;
   padding: 15px;
   background:#f8f8f8;
   border:1px solid rgba(0, 0, 0, 0.075);
@@ -34,6 +34,11 @@
 .taste_title{
   height: 40px;
   width: 60%;
+}
+
+.food_example{
+  height: 40px;
+  width: 70%;
 }
 
 .how_to_cooks{

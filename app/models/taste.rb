@@ -11,8 +11,8 @@ class Taste < ApplicationRecord
     validates :image
     validates :title
     validates :example
+    validates :recipe
     validates :genre_id, numericality: { other_than: 1 }
-    validates :user_id
   end
   
 end

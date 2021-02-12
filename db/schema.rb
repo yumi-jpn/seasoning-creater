@@ -44,7 +44,8 @@ ActiveRecord::Schema.define(version: 2021_02_10_154045) do
 
   create_table "tastes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.text "example", null: false
+    t.string "example", null: false
+    t.text "recipe", null: false
     t.integer "genre_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
