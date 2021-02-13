@@ -1,5 +1,5 @@
-<div class='sub_comment'>味付けの提案</div>
-<%= form_with(url:"#", local: true, method: :get, class: "search-form") do |form| %>
+<div class='sub_comment'>冷蔵庫にある材料で食べたい味をチョイス！</div>
+<%= form_with(url:"#", local: true, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "材料から検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>

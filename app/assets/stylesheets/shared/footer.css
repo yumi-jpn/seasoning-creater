@@ -1,3 +1,7 @@
+.footer_wrapper{
+  align-items: flex-end;
+}
+
 .footer {
   width: 100vw;
   height: 120px;

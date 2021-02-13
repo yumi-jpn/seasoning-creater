@@ -1,6 +1,6 @@
 .menu-btn {
   width: 120px;
-  background: darkblue;
+  background: darkred;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -18,6 +18,6 @@
 }
 
 .menu-btn-icon {
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: 90%;
 }
