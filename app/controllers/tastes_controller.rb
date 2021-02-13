@@ -2,7 +2,7 @@ class TastesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @taste = Taste.all
+    @taste = Taste.all.order(created_at: :desc)
   end
 
   def new
@@ -22,7 +22,7 @@ class TastesController < ApplicationController
   private
 
   def taste_params
-    params.require(:taste).permit(:title, :example, :image, :genre_id, taste_seasonings_attributes: [:seasoning_name, :quantity]).merge(user_id: current_user.id)
+    params.require(:taste).permit(:title, :example, :image, :recipe, :genre_id,
+                                  taste_seasonings_attributes: [:seasoning_name, :quantity]).merge(user_id: current_user.id)
   end
-
 end

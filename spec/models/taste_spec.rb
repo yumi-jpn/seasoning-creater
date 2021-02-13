@@ -36,7 +36,7 @@ RSpec.describe Taste, type: :model do
         it 'genre_idの選択が1では登録できない' do
           @taste.genre_id = 1
           @taste.valid?
-          expect(@taste.errors.full_messages).to include("Genre must be other than 1")
+          expect(@taste.errors.full_messages).to include('Genre must be other than 1')
         end
       end
     end

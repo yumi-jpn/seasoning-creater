@@ -1,19 +1,19 @@
-/* トップページ */
+/* メイントップページ */
 .main{
-  background-color: rgba(188, 201, 201, 0.278);
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
 }
 
 .image_position{
+  margin-top: 30px;
   display: flex;
   justify-content: space-around;
+  background-color: black;
 }
 
 .menus_image{
   height: 120px;
   width:  120px;
-  margin-top: 70px;
 }
 
 .select_taste{
@@ -21,4 +21,56 @@
   justify-content: space-around;
   font-family: "M PLUS Rounded 1c";
 }
-/* トップページ */
+/* メイントップページ */
+
+/* 投稿一覧 */
+.taste-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  height: 150vh;
+}
+
+.taste-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.taste-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.taste-img-content {
+  position: relative;
+}
+
+.taste-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.taste-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.taste-name {
+  font-size: 2.5vh;
+}
+
+.taste-example {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+  font-family: "M PLUS Rounded 1c";
+}
+/* 投稿一覧 */

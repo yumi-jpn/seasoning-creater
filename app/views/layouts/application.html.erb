@@ -7,9 +7,48 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </head>
 
   <body>
     <%= yield %>
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true,         //画像のループ
+      effect: 'slide',    //切り替わるときのアニメーション
+      speed: 3000,        //画像の切替スピード
+      autoplay: {         //自動で動かす
+        delay: 3000,
+        disableOnInteraction: true
+      },
+      pagination: {        //ページネーション
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {        //ナビケーション
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+</script>
+    <%# <script>
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script> %>
   </body>
 </html>

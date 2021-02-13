@@ -6,7 +6,7 @@ class Taste < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
-  
+
   with_options presence: true do
     validates :image
     validates :title
@@ -14,5 +14,4 @@ class Taste < ApplicationRecord
     validates :recipe
     validates :genre_id, numericality: { other_than: 1 }
   end
-  
 end
