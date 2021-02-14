@@ -1,0 +1,44 @@
+/* 詳細ページ */
+.taste__wrapper{
+  min-height: calc(100vh - 161px);
+}
+
+.taste__hedding{
+  margin-top: 100px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.taste__user{
+  display: block;
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}
+
+.taste__image{
+  width: 60%;
+  margin: 8px;
+  padding: 16px 0;
+}
+
+.taste__detail{
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.seasoning__each{
+  display: flex;
+}
+
+.seasoning__message{
+  margin-right: 10px;
+}
+
+/* 詳細ページ */

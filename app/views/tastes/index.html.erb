@@ -45,7 +45,7 @@
      <ul class='taste-lists'>
      <% @taste.each do |taste|%>
        <div class='list'>
-         <%= link_to tastes_path(taste.id) do %>
+         <%= link_to taste_path(taste.id) do %>
          <div class='taste-img-content'>
            <%= image_tag taste.image.variant(resize: '500x500'), class: "taste-img" if taste.image.attached? %>
            </div>
