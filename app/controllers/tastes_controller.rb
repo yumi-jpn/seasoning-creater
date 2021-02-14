@@ -1,5 +1,7 @@
 class TastesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :find_params, only: [:show, :edit, :update]
+  before_action :ensure_user, only: [:edit, :update]
 
   def index
     @taste = Taste.all.order(created_at: :desc)
@@ -7,27 +9,47 @@ class TastesController < ApplicationController
 
   def new
     @taste = Taste.new
-    2.times { @taste.taste_seasonings.build }
+    @taste.taste_seasonings.build
   end
 
   def create
-    @taste = Taste.new(taste_params)
+    @taste = Taste.create(taste_params)
     if @taste.save
       redirect_to root_path
     else
-      render :new
+      render action: :new
     end
   end
 
   def show
-    @taste = Taste.find(params[:id])
     @seasoning = TasteSeasoning.where(taste_id: params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+   if @taste.update(taste_params)
+      redirect_to root_path
+   else
+      render action: :edit
+   end
   end
 
   private
 
+   def find_params
+     @taste = Taste.find(params[:id])
+   end
+
   def taste_params
     params.require(:taste).permit(:title, :example, :image, :recipe, :genre_id,
-                                  taste_seasonings_attributes: [:seasoning_name, :quantity]).merge(user_id: current_user.id)
+                                  taste_seasonings_attributes: [:id, :seasoning_name, :quantity, :_destroy]).merge(user_id: current_user.id)
   end
+
+   def ensure_user
+     @tastes = @taste.user_id == current_user.id
+     redirect_to root_path unless @tastes
+   end
+
 end

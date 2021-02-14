@@ -1,8 +1,8 @@
 class Taste < ApplicationRecord
   has_one_attached :image
   belongs_to :user
-  has_many :taste_seasonings
-  accepts_nested_attributes_for :taste_seasonings
+  has_many :taste_seasonings, dependent: :destroy
+  accepts_nested_attributes_for :taste_seasonings, allow_destroy: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre

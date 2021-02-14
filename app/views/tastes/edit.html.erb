@@ -3,9 +3,10 @@
   <div class="inner-contact">
      <div class="contact-form">
         <%= form_with(model: @taste, local: true) do |form| %>
+
          <%#エラーメッセージの表示 %>
          <%= render "shared/error_messages", model: form.object, class: "error-messages" %>
-          
+         
           <div class= "form">
             <div class="form_left">
                 <div class="weight-darkcyan-text">テイスト名</div>
@@ -16,7 +17,7 @@
                    <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"create-hour"}) %> 
                 <div class="weight-darkcyan-text">作った料理</div>
                    <%= form.text_field :example, class:"food_example", placeholder:"例) 唐揚げ" %>
-                   <div class="weight-darkcyan-text">作り方</div>
+                <div class="weight-darkcyan-text">作り方</div>
                    <%= form.text_area :recipe, class:"how_to_cooks", placeholder:"例) 1.全種類を混ぜて揉み込み、30分間ジップロック保存" %>
             </div>
             <div class="form_right">
