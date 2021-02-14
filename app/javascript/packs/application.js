@@ -8,7 +8,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
-import "cocoon"
+import "cocoon";
 //= require swiper/swiper-bundle.js
 //= require swiper.js
 

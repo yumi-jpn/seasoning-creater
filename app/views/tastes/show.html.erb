@@ -10,8 +10,8 @@
       <%# テイストの投稿者とログインしているユーザーが同じであれば以下を表示する %>
     <% if user_signed_in? && current_user.id == @taste.user.id %>
         <div class="taste__manage">
-          <%= link_to "編集する", "#", class: :taste__btn %>
-          <%= link_to "削除する", "#", method: :delete, class: :taste__btn %>
+          <%= link_to "編集する", edit_taste_path(@taste.id), class: :taste__btn %>
+          <%= link_to "削除する", taste_path(@taste.id), method: :delete, class: :taste__btn %>
         </div>
      <% end %>
       <%# テイストの投稿者とログインしているユーザーが同じであれば上記を表示する %>
