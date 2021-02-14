@@ -19,6 +19,11 @@ class TastesController < ApplicationController
     end
   end
 
+  def show
+    @taste = Taste.find(params[:id])
+    @seasoning = TasteSeasoning.where(taste_id: params[:id])
+  end
+
   private
 
   def taste_params
