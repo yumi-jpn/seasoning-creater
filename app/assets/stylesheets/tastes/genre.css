@@ -1,0 +1,54 @@
+
+h1 {
+	display: block;
+	color: darkslategray; /* 文字色 */
+	padding: 10px 10px 10px 60px; /* 上・右・下・左の余白 */
+	position: relative;
+}
+h1:before {
+	content: '＊*'; /*花に見せかけるためのアスタリスク*/
+	color: #fff; /* アスタリスクの色 */
+	display: inline-block;
+	font-size: 30px; /* アスタリスクの大きさ */
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	text-shadow: 0px 0px 6px rgb(20, 190, 133), 0px 0px 4px aqua, 0 0 0.5px darkcyan; /* アスタリスク周りの影 */
+}
+h1:after {
+	border-bottom: 2px dotted darkcyan; /* 下線 */
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.list{
+	display: flex;
+	font-family: "M PLUS Rounded 1c";
+	height: 100vh;
+	width: 100vw;
+}
+
+.taste-img-content {
+	position: relative;
+	margin: 15px;
+}
+
+.taste-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.taste-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
