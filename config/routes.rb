@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "tastes#index"
-   resources :tastes
+  get '/genre/:id', to: "tastes#genre"
+  resources :tastes
 end

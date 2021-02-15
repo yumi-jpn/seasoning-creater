@@ -40,6 +40,13 @@ class TastesController < ApplicationController
     @taste.destroy if @taste.user_id == current_user.id
   end
 
+  # ジャンル別遷移用アクション
+  def genre
+    @taste = Taste.find_by(genre_id: params[:id])
+    @tastes = Taste.where(genre_id: params[:id]).order('created_at DESC')
+  end
+  # ジャンル別遷移用アクション
+
   private
 
   def find_params

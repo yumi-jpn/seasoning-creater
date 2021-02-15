@@ -1,4 +1,5 @@
-<%= render "/shared/header" %>
+<div class="wrapper">
+ <%= render "/shared/header" %>
 
    <div class="sub_header">
      <%= render "/shared/sub_header" %>
@@ -24,11 +25,11 @@
 
    <%# ジャンルの選択ボタン %>
       <div class="image_position">
-        <%= link_to image_tag("taste1.png", class:"menus_image"), "#" %>
-        <%= link_to image_tag("taste2.png", class:"menus_image"), "#" %>
-        <%= link_to image_tag("taste3.png", class:"menus_image"), "#" %>
-        <%= link_to image_tag("taste4.png", class:"menus_image"), "#" %>
-        <%= link_to image_tag("taste5.png", class:"menus_image"), "#" %>
+        <%= link_to image_tag("taste1.png", class:"menus_image"), '/genre/2' %>
+        <%= link_to image_tag("taste2.png", class:"menus_image"), '/genre/3' %>
+        <%= link_to image_tag("taste3.png", class:"menus_image"), '/genre/4' %>
+        <%= link_to image_tag("taste4.png", class:"menus_image"), '/genre/5' %>
+        <%= link_to image_tag("taste5.png", class:"menus_image"), '/genre/6' %>
       </div>
       <div class='select_taste'>
          <div class='under_taste'>食材の下味</div>
@@ -69,3 +70,5 @@
     <span class='menu-btn-text'>投稿する</span>
     <%= image_tag 'seasoning_create.png', size: '180x50',class: "menu-btn-icon" %>
     <% end %>
+
+</div>
