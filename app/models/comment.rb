@@ -3,5 +3,9 @@ class Comment < ApplicationRecord
   belongs_to :taste
   has_one_attached :image
 
-  validates :comment, presence: true
+  with_options presence: true do
+    validates :comment
+    validates :image
+  end
+
 end
