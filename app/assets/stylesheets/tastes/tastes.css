@@ -1,14 +1,14 @@
 /* メイントップページ */
 .main{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .image_position{
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
-  background-color: black;
+  background-color: palegoldenrod;
 }
 
 .menus_image{
@@ -34,7 +34,8 @@
 }
 
 .taste-lists {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -1,60 +1,65 @@
 <%= render "/shared/header" %>
 
-<main class="main_show">
-  <div class="inner">
-    <div class="taste__wrapper">
-      <p class="taste__hedding">
-        <%= @taste.title %>
-      </p>
-      <%= link_to 'by '+@taste.user.nickname+"さん", "#", class: :taste__user %>
-      <%# テイストの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-    <% if user_signed_in? && current_user.id == @taste.user.id %>
-        <div class="taste__manage">
-          <%= link_to "編集する", edit_taste_path(@taste.id), class: :taste__btn %>
-          <%= link_to "削除する", taste_path(@taste.id), method: :delete, class: :taste__btn %>
+  <div class="taste__wrapper">
+     <div class="wrapper_left">
+         <p class="taste__hedding">
+           <%= @taste.title %>
+        </p>
+        <div class=taste__user >投稿者：<%= @taste.user.nickname+"さん"%></div>
+        <%# テイストの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+         <% if user_signed_in? && current_user.id == @taste.user.id %>
+           <div class="taste__manage">
+             <%= link_to "編集する", edit_taste_path(@taste.id), class: :taste__btn__edit %>
+             <%= link_to "削除する", taste_path(@taste.id), method: :delete, class: :taste__btn__delete %>
+           </div>
+         <% end %>
+       <%# テイストの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+        <div class="taste__image">
+           <%= image_tag @taste.image, class: :taste__image %>
         </div>
-     <% end %>
-      <%# テイストの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-      <div class="taste__image">
-         <%= image_tag @taste.image, class: :taste__image %>
-      </div>
-      <div class="taste__body">
-        <div class="taste__detail">
-          <p class="detail__title">ジャンル</p>
-          <p class="detail__message">
-            <%= @taste.genre.name %>
-          </p>
-        </div>
-        <div class="taste__detail">
-          <p class="detail__title">料理例</p>
-          <p class="detail__message">
-            <%= @taste.example %>
-          </p>
+        <div class="taste__body">
+          <div class="taste__detail">
+            <p class="detail__title">ジャンル</p>
+            <p class="detail__message">
+              <%= @taste.genre.name %>
+            </p>
         </div>
         <div class="taste__detail">
-          <p class="detail__title">作り方</p>
-          <p class="detail__message">
-            <%= @taste.recipe %>
-          </p>
-        </div>
+           <p class="detail__title">料理例</p>
+           <p class="detail__message">
+             <%= @taste.example %>
+           </p>
+       </div>
+       <div class="taste__detail">
+           <p class="detail__title">作り方</p>
+           <p class="detail__message">
+             <%= safe_join("#{@taste.recipe}".split("\n"),tag(:br)) %>
+           </p>
+         </div>
+     </div>
+     <div class="wrapper_sub_right">
         <div class="taste__detail">
-          <p class="detail__title">材料・分量</p>
           <div class="seasoning__each">
           <div class="seasoning__message">
+          <p class="detail__title">材料</p>
               <% @seasoning.each do |s| %>
                 <li><%= s.seasoning_name %></li>
               <% end %>
           </div>
           <div class="seasoning__message">
+          <p class="detail__title">分量</p>
               <% @seasoning.each do |s| %>
                 <li><%= s.quantity %></li>
               <% end %>
           </div>
           </div>
         </div>
-      </div>
+     </div>
+     </div>
+     <div class="wrapper_right">
+       <%= render "comment_form" %>
     </div>
+       </div>
   </div>
-</main>
 
 <%= render "/shared/footer"%>

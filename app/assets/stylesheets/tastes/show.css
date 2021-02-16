@@ -1,44 +1,186 @@
 /* 詳細ページ */
 .taste__wrapper{
   min-height: calc(100vh - 161px);
+  display: flex;
 }
 
-.taste__hedding{
-  margin-top: 100px;
-  font-size: 24px;
+.wrapper_left{
+  height: 100%;
+  width: 85%;
+  position: relative;
+  margin-left: 30px;
+}
+
+.wrapper_sub_right{
+  position: absolute;
+  display: flex;
+  top: 200px;
+  left: 480px;
+}
+
+.wrapper_right{
+  height: 100%;
+  width: calc(100% - 65vw);
+  position: relative;
+  margin: 30px;
+  padding: 2.5em 1em 1em;
+  border-style: solid;
+  border-color: #82ca9c; /* 枠の色 */
+  border-width: 5px 1px 1px;
+  background-color: white;
+  color: #666;
+  box-shadow: 1px 1px 3px #ccc; /* 影 */
+}
+
+.make_a_food{
+  padding: 0.2em;
+  background: linear-gradient(transparent 70%, #fff100 70%);
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  color: #40c470;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
+.form-message{
+  width: 90%;
+  height: 100%;
+}
+
+.taste__hedding{
+  margin-left: 10px;
+  position: relative;
+  width: 85%;
+  font-size: 20px;
+  padding: 1rem 1rem calc(1rem + 10px);
+  border: 2px solid #000;
+}
+  
+.taste__hedding:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  border-top: 2px solid #000;
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .taste__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
+  width: 80%;
+  margin-left: 10px;
+  position: relative;
+  padding-bottom: .5em;
+  border-bottom: 4px solid #ccc;
+}
+
+.taste__user:after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  z-index: 2;
+  content: '';
+  width: 20%;
+  height: 4px;
+  background-color: #3498db;
 }
 
 .taste__image{
-  width: 60%;
-  margin: 8px;
-  padding: 16px 0;
+  width: 400px;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 20px;
+  box-shadow: 4px 4px 10px #ccc;
+  background-color: #FFF;
+  transform: rotate(-4deg); 
 }
 
-.taste__detail{
-  display: flex;
-  flex-direction: column;
-  margin: 8px;
+.taste__body{
+  border: solid 2px #ffb03f;
+  margin: 20px;
+  position: relative;
+  background-color: ivory;
+  width: 80%;
+}
+.taste__body .taste__detail{
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.4em;
+  border-bottom: dashed 1px silver;
+  list-style-type: none!important;
 }
 
 .detail__title{
   font-size: 20px;
   font-weight: bold;
+  border-bottom: 1px solid;
+  display: inline-block;
 }
 
 .seasoning__each{
   display: flex;
 }
 
-.seasoning__message{
-  margin-right: 10px;
+.seasoning__message {
+  border: solid 2px #ffb03f;
+  padding: 0 0.5em;
+  position: relative;
+  background-color: ivory;
 }
 
+.seasoning__message li  {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.4em;
+  border-bottom: dashed 1px silver;
+  list-style-type: none!important;
+}
+
+.seasoning__message li:last-of-type {
+  border-bottom: none;
+}
+
+
+.taste__btn__edit{
+  position: absolute;
+  top: 120px;
+  left: 300px;
+}
+
+.taste__btn__delete{
+  position: absolute;
+  top: 120px;
+  left: 400px;
+}
+
+h4{
+  border-bottom: 3px solid #40c470;
+  color: #000;
+}
+
+.comments{
+  position: relative;
+	overflow: visible;
+	text-align: center;
+	color: seagreen;
+	border-style: double;
+	border-color: darkgreen;
+}
+
+.comments:after{
+  position: absolute;
+	top: -0.7em;
+	left: 50%;
+	display: inline-block;
+	background: #ffffff;
+}
+
+.comment-image{
+  margin-right: 2px;
+}
 /* 詳細ページ */
