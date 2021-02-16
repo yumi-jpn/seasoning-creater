@@ -4,29 +4,25 @@
   display: flex;
 }
 
-.wrapper_up{
+.wrapper_left{
   height: 100%;
-  width: 70vw;
-
+  width: 85%;
   position: relative;
+  margin-left: 30px;
 }
 
 .wrapper_sub_right{
   position: absolute;
   display: flex;
   top: 200px;
-  left: 520px;
+  left: 480px;
 }
 
-.wrapper_down{
-  display: flex;
-  top: 100px;
-  right: 10px;
+.wrapper_right{
   height: 100%;
   width: calc(100% - 65vw);
-  margin-right: 20px;
   position: relative;
-  margin: 2em auto;
+  margin: 30px;
   padding: 2.5em 1em 1em;
   border-style: solid;
   border-color: #82ca9c; /* 枠の色 */
@@ -53,8 +49,9 @@
 }
 
 .taste__hedding{
+  margin-left: 10px;
   position: relative;
-  width: 80%;
+  width: 85%;
   font-size: 20px;
   padding: 1rem 1rem calc(1rem + 10px);
   border: 2px solid #000;
@@ -77,6 +74,7 @@
 
 .taste__user{
   width: 80%;
+  margin-left: 10px;
   position: relative;
   padding-bottom: .5em;
   border-bottom: 4px solid #ccc;
@@ -158,5 +156,31 @@
   position: absolute;
   top: 120px;
   left: 400px;
+}
+
+h4{
+  border-bottom: 3px solid #40c470;
+  color: #000;
+}
+
+.comments{
+  position: relative;
+	overflow: visible;
+	text-align: center;
+	color: seagreen;
+	border-style: double;
+	border-color: darkgreen;
+}
+
+.comments:after{
+  position: absolute;
+	top: -0.7em;
+	left: 50%;
+	display: inline-block;
+	background: #ffffff;
+}
+
+.comment-image{
+  margin-right: 2px;
 }
 /* 詳細ページ */

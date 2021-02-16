@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+        <%= form_with(model:[@taste, @comment], local: true) do |form| %>
+          <span class="make_a_food">料理を作ったら...</span>
+           <p>自分が作ったオリジナル料理を投稿して、料理のバリエーションを増やしましょう！</p>
+            <div class="form-input">
+                <%= form.text_area :comment, class: 'form-message', placeholder: '主材料や料理名、味付けの感想をコメントしましょう' %>
+              <label class="form-image">
+                <div class="image-file">画像</div>
+                  <%= form.file_field :image, class: 'hidden' %>
+              </label>
+            </div>
+           <%= form.submit '送信', class: 'form-submit' %>
+           <% end %>
+      <% else %>
+        <strong><p>※ コメントの投稿には新規登録/ログインが必要です ※</p></strong>
+      <% end %>
+   <div class="comments_each">
+       <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment|%>
+         <p class="comments">
+            <strong><%= comment.user.nickname+"さん" %>：</strong>
+            <%= comment.comment %>
+            <%= image_tag comment.image.variant(resize: '200x200'), class: 'comment-image' if comment.image.attached? %>
+         </p>
+      <% end %>
