@@ -3,6 +3,7 @@ class Taste < ApplicationRecord
   belongs_to :user
   has_many :taste_seasonings, dependent: :destroy
   accepts_nested_attributes_for :taste_seasonings, allow_destroy: true
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre

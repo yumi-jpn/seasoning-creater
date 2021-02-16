@@ -44,7 +44,6 @@
 ### Association
 - belongs_to :user
 - has_one :taste_seasoning
-- has_many :menu_tags
 - has_many :comments
 
 ## commentsテーブル
@@ -53,7 +52,7 @@
 | -------- | ---------- | ------------------------------ |
 | comment  | string     |                                |
 | user     | references | null: false, foreign_key: true |
-| menu     | references | null: false, foreign_key: true |
+| taste    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
