@@ -4,7 +4,8 @@ class TastesController < ApplicationController
   before_action :ensure_user, only: [:edit, :update]
 
   def index
-    @taste = Taste.all.order(created_at: :desc)
+    @taste = Taste.new
+    @tastes = Taste.all.order(created_at: :desc)
   end
 
   def new
@@ -23,6 +24,8 @@ class TastesController < ApplicationController
 
   def show
     @seasoning = TasteSeasoning.where(taste_id: params[:id])
+    @comment = Comment.new
+    @comments = @taste.comments.includes(:user)
   end
 
   def edit
@@ -62,4 +65,5 @@ class TastesController < ApplicationController
     @tastes = @taste.user_id == current_user.id
     redirect_to root_path unless @tastes
   end
+
 end

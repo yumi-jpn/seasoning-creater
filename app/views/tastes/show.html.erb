@@ -57,18 +57,32 @@
      </div>
      </div>
      <div class="wrapper_down">
-        <%= form_with model: [@taste, @comment], local: true do |f| %>
+       <% if user_signed_in? %>
+        <%= form_with(model:[@taste, @comment], local: true) do |form| %>
           <span class="make_a_food">料理を作ったら...</span>
            <p>自分が作ったオリジナル料理を投稿して、こちらの料理のバリデーションを増やしましょう！</p>
             <div class="form-input">
-                <%= f.text_area :comment, class: 'form-message', placeholder: '主材料や料理名、味付けの感想をコメントしましょう' %>
+                <%= form.text_area :comment, class: 'form-message', placeholder: '主材料や料理名、味付けの感想をコメントしましょう' %>
               <label class="form-image">
                 <div class="image-file">画像</div>
-                  <%= f.file_field "hoge", class: 'hidden' %>
+                  <%= form.file_field :image, class: 'hidden' %>
               </label>
             </div>
-           <%= f.submit '送信', class: 'form-submit' %>
-        <% end %>
+           <%= form.submit '送信', class: 'form-submit' %>
+           <% end %>
+      <% else %>
+        <strong><p>※ コメントの投稿には新規登録/ログインが必要です ※</p></strong>
+      <% end %>
+      <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= comment.user.nickname %>：</strong>
+          <%= comment.comment %>
+          <%= image_tag comment.image.variant(resize: '200x200'), class: 'comment-image' if comment.image.attached? %>
+        </p>
+      <% end %>
+    </div>
        </div>
   </div>
 

@@ -42,7 +42,7 @@
    <div class='taste-contents'>
      <h2>ピックアップ</h2>
      <ul class='taste-lists'>
-      <% @taste.each do |taste|%>
+      <% @tastes.each do |taste|%>
         <div class='list'>
           <%= link_to taste_path(taste.id) do %>
             <div class='taste-img-content'>
@@ -63,7 +63,6 @@
    </div>
    <%# 投稿一覧 %>
  <%= render "/shared/footer"%>
-
   </div>
     <%= link_to(new_taste_path, class: 'menu-btn') do %>
     <span class='menu-btn-text'>投稿する</span>
