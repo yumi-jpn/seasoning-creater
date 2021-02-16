@@ -1,26 +1,24 @@
 <div class="wrapper">
- <%= render "/shared/header" %>
+   <%= render "/shared/header" %>
+   <%= render "/shared/sub_header" %>
 
-   <div class="sub_header">
-     <%= render "/shared/sub_header" %>
-     </div>
-<div class="main">
+  <div class="main">
 
-  <%# Swiperの実装 %>
+   <%# Swiperの実装 %>
    <div class="swiper-container"> 
-   <%#-- メイン表示部分 --%> 
+      <%#-- メイン表示部分 --%> 
       <div class="swiper-wrapper"> 
-   <%#-- 各スライド --%>
+         <%#-- 各スライド --%>
          <div class="swiper-slide"><img src="index1.jpg" alt style="width: 100%; height: 100%;"></div>
          <div class="swiper-slide"><img src="index2.jpg" alt style="width: 100%; height: 100%;"></div>
          <div class="swiper-slide"><img src="index3.jpg" alt style="width: 100%; height: 100%;"></div>
          <div class="swiper-slide"><img src="index4.jpg" alt style="width: 100%; height: 100%;"></div>
-       </div>
-   <%#-- ナビケーション --%>
-       <div class="swiper-button-prev"></div>
-       <div class="swiper-button-next"></div>
-       <div class="swiper-pagination"></div>
-    </div>
+      </div>
+      <%#-- ナビケーション --%>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+   </div>
    <%# Swiperの実装 %>
 
    <%# ジャンルの選択ボタン %>
@@ -32,11 +30,11 @@
         <%= link_to image_tag("taste5.png", class:"menus_image"), '/genre/6' %>
       </div>
       <div class='select_taste'>
-         <div class='under_taste'>食材の下味</div>
+         <div class='under_taste'>揚げ物</div>
          <div class='stir_fry'>炒め物</div>
          <div class='soup'>煮物</div>
-         <div class='bolied_food'>スープの味付け</div>
-         <div class='other'>その他</div>
+         <div class='bolied_food'>汁物</div>
+         <div class='other'>ごはんもの</div>
       </div>
    <%# ジャンルの選択ボタン %>
 
@@ -44,31 +42,31 @@
    <div class='taste-contents'>
      <h2>ピックアップ</h2>
      <ul class='taste-lists'>
-     <% @taste.each do |taste|%>
-       <div class='list'>
-         <%= link_to taste_path(taste.id) do %>
-         <div class='taste-img-content'>
-           <%= image_tag taste.image.variant(resize: '500x500'), class: "taste-img" if taste.image.attached? %>
-           </div>
-          <div class='taste-info'>
-            <h3 class='taste-name'>
-              <%= taste.title %>
-            </h3>
-            <div class='taste-example'>
-               <span>オススメは<%= taste.genre.name %>♪</span>
+      <% @taste.each do |taste|%>
+        <div class='list'>
+          <%= link_to taste_path(taste.id) do %>
+            <div class='taste-img-content'>
+              <%= image_tag taste.image.variant(resize: '500x500'), class: "taste-img" if taste.image.attached? %>
             </div>
-          </div>
-         <% end %>
-       </div>
-     <% end %>
-     </div>
+              <div class='taste-info'>
+                 <h3 class='taste-name'>
+                   <%= taste.title %>
+                 </h3>
+                 <div class='taste-example'>
+                    <span>オススメは<%= taste.genre.name %>♪</span>
+                 </div>
+              </div>
+          <% end %>
+        </div>
+      <% end %>
+     </ul>
+   </div>
    <%# 投稿一覧 %>
-      <%= render "/shared/footer"%>
-</div>
+ <%= render "/shared/footer"%>
 
+  </div>
     <%= link_to(new_taste_path, class: 'menu-btn') do %>
     <span class='menu-btn-text'>投稿する</span>
     <%= image_tag 'seasoning_create.png', size: '180x50',class: "menu-btn-icon" %>
     <% end %>
-
 </div>
