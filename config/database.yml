@@ -50,5 +50,7 @@ test:
 production:
   <<: *default
   database: seasoning_creater_production
-  username: seasoning_creater
-  password: <%= ENV['SEASONING_CREATER_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+
