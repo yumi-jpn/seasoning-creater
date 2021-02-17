@@ -69,23 +69,3 @@
 ### Association
 - belongs_to :taste
 
-## taste_tag_relationsテーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| taste    | references | null: false, foreign_key: true |
-| tag      | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :taste
-- belongs_to :tag
-
-## tagsテーブル
-
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-
-### Association
-- has_many :taste_tags
-- has_many :tags, through: taste_tags
