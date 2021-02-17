@@ -12,8 +12,8 @@
 }
 
 .menus_image{
-  height: 120px;
-  width:  120px;
+  height: 150px;
+  width:  150px;
 }
 
 .select_taste{
@@ -24,9 +24,29 @@
 /* メイントップページ */
 
 /* 投稿一覧 */
+h2{
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 4rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #e95e5e;
+  font-family: "M PLUS Rounded 1c";
+}
+
+h2:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
 .taste-contents {
   background-color: #FFF;
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
@@ -42,20 +62,16 @@
   font-family: "M PLUS Rounded 1c";
 }
 
-.taste-lists>.list {
+.list {
   width: 37vh;
+  height: 37vh;
   padding: 1vw;
   background-color: #FFF;
 }
 
-
-.taste-img-content {
-  position: relative;
-}
-
 .taste-img {
-  width: 33vh;
-  height: 33vh;
+  width: 20vw;
+  height: 30vh;
 }
 
 .taste-info {
