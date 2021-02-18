@@ -1,12 +1,8 @@
-.footer_wrapper{
-  align-items: flex-end;
-}
-
 .footer {
   width: 100vw;
   height: 120px;
   color: #ffffff;
-  background-color: rgb(182, 96, 17);
+  background-color: rgb(6, 158, 158);
   text-align: center;
   border-top: 1px solid black;
 }

@@ -1,5 +1,5 @@
+<%= render "/shared/header"%>
 <div class="wrapper">
- <%= render "/shared/header"%>
   <div class="main_wrapper">
      <h1><%= @taste.genre.name %></h1>
         <% @tastes.each do |taste| %>
@@ -13,11 +13,12 @@
                    </h3>
                    <div class='taste-example'>
                    <span><%= taste.example %>に！<span>
-                  </div>
+                   </div>
+                 </div>
               </div>
             <% end %>
           </div>
         <% end %>
   </div>
 </div>
- <%= render "/shared/footer"%>
+<%= render "/shared/footer"%>

@@ -27,7 +27,7 @@
 | encrypted_password | string  | null: false               |
 
 ### Association
-- has_many :taste
+- has_many :tastes
 - has_many :comments
 
 ## tasteテーブル
@@ -58,7 +58,7 @@
 - belongs_to :user
 - belongs_to :taste
 
-## taste_seasoningテーブル
+## taste_seasoningsテーブル
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
