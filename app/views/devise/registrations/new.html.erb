@@ -6,23 +6,23 @@
    <%= render "shared/error_messages", model: f.object, class: "error-messages" %>
   <div class="form-wrap">
    <div class="field">
-     <%= f.label :ニックネーム %><br />
-     <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+     <%= f.label :nickname %><br />
+     <%= f.text_field :nickname, autofocus: true %>
    </div>
 
    <div class="field">
      <%= f.label :email %><br />
-     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     <%= f.email_field :email %>
    </div>
 
    <div class="field">
-     <%= f.label :パスワードは半角英数字混合 %><br />
-     <%= f.password_field :password, autocomplete: "new-password" %>
+     <%= f.label :password %>半角英数字混合<br />
+     <%= f.password_field :password, autocomplete: "off" %>
    </div>
 
    <div class="field">
-     <%= f.label :パスワード確認用 %><br />
-     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+     <%= f.label :password_confirmation %>・確認用<br />
+     <%= f.password_field :password_confirmation, autocomplete: "off" %>
    </div>
 
    <div class="actions">
