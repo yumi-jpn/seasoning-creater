@@ -6,8 +6,8 @@ FactoryBot.define do
     recipe             { '1, 全種類を混ぜ、沸騰したら完成！' }
     association :user # アソシエーション
 
-    after(:build) do |item|
-      item.image.attach(io: File.open('public/menus_sample.jpg'), filename: 'menus_sample.jpg')
+    after(:build) do |taste|
+      taste.image.attach(io: File.open('public/menus_sample.jpg'), filename: 'menus_sample.jpg')
     end
   end
 end

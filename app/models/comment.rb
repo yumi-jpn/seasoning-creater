@@ -7,5 +7,4 @@ class Comment < ApplicationRecord
     validates :comment
     validates :image
   end
-
 end

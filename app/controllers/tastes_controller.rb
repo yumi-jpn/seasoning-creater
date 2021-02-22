@@ -65,5 +65,4 @@ class TastesController < ApplicationController
     @tastes = @taste.user_id == current_user.id
     redirect_to root_path unless @tastes
   end
-
 end
