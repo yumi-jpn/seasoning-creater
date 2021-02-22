@@ -11,7 +11,7 @@
                 <div class="weight-darkcyan-text">テイスト名</div>
                    <%= form.text_field :title, class:"taste_title", placeholder:"例) 濃厚ケチャップ味" %>
                 <div class="weight-darkcyan-text">料理写真</div>
-                   <%= form.file_field :image, class:"taste_image" %>
+                   <%= form.file_field :image, class:"taste_image", name:"taste[image]" %>
                 <div class="weight-darkcyan-text">おすすめジャンル</div>
                    <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"create-hour"}) %> 
                 <div class="weight-darkcyan-text">作った料理</div>
