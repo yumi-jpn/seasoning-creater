@@ -78,6 +78,8 @@
 }
 
 .taste__user{
+  font-size: 20px;
+  font-weight: bold;
   width: 80%;
   margin-left: 10px;
   position: relative;
@@ -154,14 +156,14 @@
 
 .taste__btn__edit{
   position: absolute;
-  top: 120px;
-  left: 300px;
+  top: 170px;
+  left: 500px;
 }
 
 .taste__btn__delete{
   position: absolute;
-  top: 120px;
-  left: 400px;
+  top: 170px;
+  left: 600px;
 }
 
 h4{
@@ -185,9 +187,5 @@ h4{
 	left: 50%;
 	display: inline-block;
 	background: #ffffff;
-}
-
-.comment-image{
-  
 }
 /* 詳細ページ */
