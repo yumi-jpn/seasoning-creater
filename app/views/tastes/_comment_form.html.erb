@@ -17,9 +17,9 @@
    <div class="comments_each">
        <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment|%>
-         <p class="comments">
-            <strong><%= comment.user.nickname+"さん" %>：</strong>
-            <%= comment.comment %>
-            <%= image_tag comment.image.variant(resize: '200x200'), class: 'comment-image' if comment.image.attached? %>
-         </p>
+         <div class="comments">
+            <strong><%= "< "+comment.user.nickname+"さん >" %></strong>
+            <div><%= comment.comment %></div>
+            <%= image_tag comment.image.variant(resize: '250x250'), class: 'comment-image' if comment.image.attached? %>
+         </div>
       <% end %>
