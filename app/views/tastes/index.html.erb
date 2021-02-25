@@ -46,7 +46,7 @@
        <ul class='taste-lists'>
          <% @tastes.each do |taste|%>
              <div class='list', id="taste_<%= taste.id %>">
-                <%= render 'taste', taste: taste %>
+                <%= render 'tastes', taste: taste %>
              </div>
          <% end %>
        </ul>
