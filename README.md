@@ -110,6 +110,7 @@ http://35.72.196.190/
 ### Association
 - has_many :taste
 - has_many :comments
+- has_many :likes
 
 ## tasteテーブル
 
@@ -126,6 +127,7 @@ http://35.72.196.190/
 - belongs_to :user
 - has_one :taste_seasoning
 - has_many :comments
+- has_many :likes
 
 ## commentsテーブル
 
@@ -148,4 +150,17 @@ http://35.72.196.190/
 | taste          | references | null: false, foreign_key: true |
 
 ### Association
+- belongs_to :taste
+
+
+## likesテーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| user_id    | integer    | null: false, foreign_key: true |
+| taste_id   | integer    | null: false, foreign_key: true |
+
+
+### Association
+- belongs_to :user
 - belongs_to :taste

@@ -72,3 +72,4 @@ gem 'active_hash'
 gem 'cocoon'
 gem 'pry-rails'
 gem "aws-sdk-s3", require: false
+gem 'font-awesome-sass'
