@@ -64,6 +64,7 @@ h2:before {
 }
 
 .list {
+  position: relative;
   width: 37vh;
   height: 37vh;
   padding: 1vw;
@@ -90,5 +91,29 @@ h2:before {
   display: flex;
   justify-content: space-between;
   font-family: "M PLUS Rounded 1c";
+}
+
+.like-link {
+  position: absolute;
+  top: 120%;
+  right: 20%;
+  text-decoration: none;
+}
+
+.like-link:hover {
+  background-color: #fff!important;
+}
+ 
+.unlike-btn {
+  font-size: 15px;
+  color: #e54747;
+}
+
+.likes-count{
+  position: absolute;
+  top: 120%;
+  right: 10%;
+  font-size: 20px;
+  font-weight: bold;
 }
 /* 投稿一覧 */

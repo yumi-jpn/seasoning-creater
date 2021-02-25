@@ -4,6 +4,7 @@ class Taste < ApplicationRecord
   has_many :taste_seasonings, dependent: :destroy
   accepts_nested_attributes_for :taste_seasonings, allow_destroy: true
   has_many :comments
+  has_many :likes
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
