@@ -96,16 +96,9 @@ h2:before {
   font-family: "M PLUS Rounded 1c";
 }
 
-.fa{
+.like_list{
   position: absolute;
   bottom: -15%;
-  right: 5%;
-  text-decoration: none;
-}
-
-.far{
-  position: absolute;
-  bottom: -15%;
-  right: 5%;
+  right: 0%;
 }
 /* 投稿一覧 */

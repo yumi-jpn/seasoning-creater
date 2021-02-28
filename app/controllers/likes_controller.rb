@@ -11,7 +11,7 @@ class LikesController < ApplicationController
 
   private
 
-   def taste_params
+  def taste_params
     @taste = Taste.find(params[:id])
-   end
+  end
 end
