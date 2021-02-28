@@ -66,6 +66,11 @@
          <% end %>
        </ul>
     </div>
+     </div>
+    <%= link_to(new_taste_path, class: 'menu-btn') do %>
+    <span class='menu-btn-text'>投稿する</span>
+    <%= image_tag 'seasoning_create.png', size: '180x50',class: "menu-btn-icon" %>
          <%= render "/shared/footer" %>
+    <% end %>
 </div>
 
