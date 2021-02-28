@@ -1,0 +1,17 @@
+<%# いいね機能の表示 %>
+<% if user_signed_in? %>
+   <% if current_user.liked_by?(taste.id) %>
+      <td>
+        <%= link_to 'いいねを外す', destroy_like_path(taste), method: :DELETE, remote: true %>
+        <%= taste.likes.count %>
+      </td>
+   <% else %>
+      <td>
+        <%= link_to 'いいね', create_like_path(taste), method: :POST, remote: true %>
+        <%= taste.likes.count %>
+      </td> 
+   <% end %>
+<% else %>
+    <p>お気に入り数: <%= taste.likes.count %></p>
+<% end %>
+<%# いいね機能の表示 %>
