@@ -65,9 +65,9 @@ h2:before {
 
 .list {
   position: relative;
-  width: 37vh;
-  height: 37vh;
-  padding: 1vw;
+  width: 35vh;
+  height: 35vh;
+  padding: 6px;
   background-color: #FFF;
 }
 
@@ -83,37 +83,22 @@ h2:before {
 }
 
 .taste-name {
-  font-size: 2.5vh;
+  position: absolute;
+  bottom: -35px;
+  font-size: 3vh;
+  font-family: "M PLUS Rounded 1c";
 }
 
 .taste-example {
-  font-size: 1.5vh;
+  font-size: 2vh;
   display: flex;
   justify-content: space-between;
   font-family: "M PLUS Rounded 1c";
 }
 
-.like-link {
+.like_list{
   position: absolute;
-  top: 120%;
-  right: 20%;
-  text-decoration: none;
-}
-
-.like-link:hover {
-  background-color: #fff!important;
-}
- 
-.unlike-btn {
-  font-size: 15px;
-  color: #e54747;
-}
-
-.likes-count{
-  position: absolute;
-  top: 120%;
-  right: 10%;
-  font-size: 20px;
-  font-weight: bold;
+  bottom: -15%;
+  right: 0%;
 }
 /* 投稿一覧 */

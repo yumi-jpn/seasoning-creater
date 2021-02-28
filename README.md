@@ -1,5 +1,5 @@
 # Seasoning-Creater  -味付けシェアサイト-
-URLはこちらになります！　
+URLはこちらになります！
 http://35.72.196.190/
 
 
@@ -26,15 +26,15 @@ http://35.72.196.190/
 ***
 ## 使用言語
 - Ruby 2.6.5
-- Java script
+- JavaScript
 
 ## フレームワーク
-- Ruby on rails 6.0.0
-- Jquery 3.4.1
+- Ruby on Rails 6.0.0
+- jQuery 3.4.1
 
 ## 開発環境
-- デプロイ　:AWS(S3,EC2)
-- データベース　:MySQL 14.14
+- インフラ :AWS(S3,EC2)
+- データベース :MySQL 14.14
 - セッション管理 :devise(Gem)
 - 画像アップのライブラリ :Active Storage(Gem)
 

@@ -1,0 +1,21 @@
+<%# いいね機能の表示 %>
+<% if user_signed_in? %>
+   <% if current_user.liked_by?(taste.id) %>
+      <td>
+        <%= link_to destroy_like_path(taste), class: "like-link", method: :DELETE, remote: true do %>
+          <i class="fa fa-heart unlike-btn fa-2x"></i>
+        <% end %>
+        <%= taste.likes.count %>
+      </td>
+   <% else %>
+      <td>
+        <%= link_to create_like_path(taste), class: "like-link", method: :POST, remote: true do %>
+          <i class="fa fa-heart like-btn fa-2x"></i>
+        <% end %>
+        <%= taste.likes.count %>
+      </td> 
+   <% end %>
+<% else %>
+    <p class="fa fa-heart unlike-btn"> <%= taste.likes.count %></p>
+<% end %>
+<%# いいね機能の表示 %>

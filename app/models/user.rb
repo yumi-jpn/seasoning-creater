@@ -12,7 +12,7 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }
 
-  def liked
+  def liked_by?(taste_id)
     likes.where(taste_id: taste_id).exists?
   end
 end
