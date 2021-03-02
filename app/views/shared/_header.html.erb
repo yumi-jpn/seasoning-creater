@@ -8,6 +8,7 @@
       <%# ログインの有無で表示変更 %>
       <% if user_signed_in?%>
         <div class="user-nickname" >"こんにちは<%= current_user.nickname %>さん！"</div>
+        <li><%= link_to 'マイページ',user_path(current_user.id), class: "btn mypage" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "btn login" %></li>
