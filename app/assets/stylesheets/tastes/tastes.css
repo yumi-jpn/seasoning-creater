@@ -83,8 +83,6 @@ h2:before {
 }
 
 .taste-name {
-  position: absolute;
-  bottom: -40px;
   font-size: 20px;
   font-family: "M PLUS Rounded 1c";
 }

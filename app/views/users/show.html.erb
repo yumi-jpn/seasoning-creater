@@ -1,0 +1,24 @@
+<%= render "/shared/header" %>
+ <div class="t-wrapper">
+   <div class="my_page">
+    <p class="t-user"><%= @nickname %>さんの投稿一覧</p>
+     <% @tastes.each do |taste| %>
+       <div class='my_taste'>
+         <%= link_to taste_path(taste.id) do %>
+             <div class='t-img-content'>
+                <%= image_tag taste.image.variant(resize: '300x300'), class: "taste-img" if taste.image.attached? %>
+             </div>
+             <div class='t-info'>
+               <h3 class='t-name'>
+                  <%= taste.title %>
+               </h3>
+               <div class='t-example'>
+                 <span>オススメは<%= taste.genre.name %>♪</span>
+               </div>
+             </div> 
+         <% end %>
+        </div>
+     <% end %>
+   </div>
+ </div>
+<%= render "/shared/footer" %>

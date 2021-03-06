@@ -5,13 +5,13 @@
         <% @tastes.each do |taste| %>
           <div class='list'>
             <%= link_to taste_path(taste.id) do %>
-              <div class='taste-img-content'>
-                 <%= image_tag taste.image.variant(resize: '500x500'), class: "taste-img" if taste.image.attached? %>
-                 <div class='taste-info'>
-                   <h3 class='taste-name'>
+              <div class='t-img-content'>
+                 <%= image_tag taste.image.variant(resize: '450x450'), class: "taste-img" if taste.image.attached? %>
+                 <div class='t-info'>
+                   <h3 class='t-name'>
                      <%= taste.title %>
                    </h3>
-                   <div class='taste-example'>
+                   <div class='t-example'>
                    <span><%= taste.example %>に！<span>
                    </div>
                  </div>
