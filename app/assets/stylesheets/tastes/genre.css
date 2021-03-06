@@ -40,22 +40,33 @@ h1:after {
 .list{
 	display: inline-block;
 	font-family: "M PLUS Rounded 1c";
-	height: 100vh;
-	width: 100vw;
 }
 
-.taste-img-content {
+.t-img-content {
 	position: relative;
 	margin: 15px;
 }
 
-.taste-img {
+.t-img {
   width: 33vh;
   height: 33vh;
 }
 
-.taste-info {
+.t-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
+}
+
+.t-name {
+  margin-top: 3px;
+  font-size: 20px;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.t-example {
+  font-size: 2vh;
+  display: flex;
+  justify-content: space-between;
+  font-family: "M PLUS Rounded 1c";
 }
